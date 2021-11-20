@@ -198,7 +198,7 @@ public class QuizActivity extends AppCompatActivity {
             option4.setText(questionsList.get(currentQuestionPosition).getOption4());
 
         } else {
-            Intent intent = new Intent(QuizActivity.this, QuizActivity.class);
+            Intent intent = new Intent(QuizActivity.this, QuizResults.class);
             intent.putExtra("correct", getCorrectAnswers());
             intent.putExtra("incorrect", getInCorrectAnswers());
             startActivity(intent);
