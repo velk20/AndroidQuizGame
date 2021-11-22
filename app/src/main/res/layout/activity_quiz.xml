@@ -31,29 +31,7 @@
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="15dp"
-                android:src="@drawable/timer_icon"/>
-
-            <TextView
-                android:id="@+id/timer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="00:59"
-                android:textColor="#FAA72F"/>
-        </LinearLayout>
 
     </RelativeLayout>
 
@@ -63,7 +41,7 @@
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:background="@drawable/round_back_white10"
+        android:background="@drawable/options_background"
         android:elevation="1dp"
         android:gravity="center"
         android:paddingStart="15dp"
@@ -78,7 +56,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="-20dp"
-        android:background="@drawable/round_back_light_yellow"
+        android:background="@drawable/questions_background"
         android:gravity="center"
         android:minHeight="100dp"
         android:text="Question will come here"
@@ -93,7 +71,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:text="Option 1"
-        android:background="@drawable/round_back_white_stroke2"
+        android:background="@drawable/options_background"
         android:textAllCaps="false"
         android:textColor="#1F6BB8"
         android:layout_marginEnd="20dp"/>
@@ -105,7 +83,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Option 2"
-        android:background="@drawable/round_back_white_stroke2"
+        android:background="@drawable/options_background"
         android:textAllCaps="false"
         android:textColor="#1F6BB8"
         android:layout_marginEnd="20dp"/>
@@ -117,7 +95,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Option 3"
-        android:background="@drawable/round_back_white_stroke2"
+        android:background="@drawable/options_background"
         android:textAllCaps="false"
         android:textColor="#1F6BB8"
         android:layout_marginEnd="20dp"/>
@@ -129,7 +107,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Option 4"
-        android:background="@drawable/round_back_white_stroke2"
+        android:background="@drawable/options_background"
         android:textAllCaps="false"
         android:textColor="#1F6BB8"
         android:layout_marginEnd="20dp"/>
@@ -141,7 +119,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
         android:text="Next"
-        android:background="@drawable/round_back_green"
+        android:background="@drawable/correct_option1"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:layout_marginEnd="20dp"/>

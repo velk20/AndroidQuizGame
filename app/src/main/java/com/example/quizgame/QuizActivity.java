@@ -11,10 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -23,10 +20,8 @@ public class QuizActivity extends AppCompatActivity {
     private AppCompatButton option1, option2, option3, option4;
     private AppCompatButton nextBtn;
 
-    private Timer quizTimer;
 
-    private int totalTimeInMins = 1;
-    private int seconds = 0;
+
 
     private  List<QuestionsList> questionsList ;
     private int currentQuestionPosition = 0;
@@ -39,7 +34,6 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         final ImageView backBtn = findViewById(R.id.backBtn);
-        final TextView timer = findViewById(R.id.timer);
         final TextView selectedTopicName = findViewById(R.id.topicName);
 
         questions = findViewById(R.id.questions);
@@ -59,7 +53,7 @@ public class QuizActivity extends AppCompatActivity {
 
 
         questionsList = QuestionsBank.getQuestions(getSelectedTopicName);
-        startTimer(timer);
+
 
         questions.setText((currentQuestionPosition + 1) + "/" + questionsList.size());
         question.setText(questionsList.get(0).getQuestion());
@@ -75,7 +69,7 @@ public class QuizActivity extends AppCompatActivity {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option1.getText().toString();
 
-                    option1.setBackgroundResource(R.drawable.option_selection);
+                    option1.setBackgroundResource(R.drawable.wrong_option);
                     option1.setTextColor(Color.WHITE);
 
                     revealAnswer();
@@ -93,7 +87,7 @@ public class QuizActivity extends AppCompatActivity {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option2.getText().toString();
 
-                    option2.setBackgroundResource(R.drawable.option_selection);
+                    option2.setBackgroundResource(R.drawable.wrong_option);
                     option2.setTextColor(Color.WHITE);
 
                     revealAnswer();
@@ -111,7 +105,7 @@ public class QuizActivity extends AppCompatActivity {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option3.getText().toString();
 
-                    option3.setBackgroundResource(R.drawable.option_selection);
+                    option3.setBackgroundResource(R.drawable.wrong_option);
                     option3.setTextColor(Color.WHITE);
 
                     revealAnswer();
@@ -130,7 +124,7 @@ public class QuizActivity extends AppCompatActivity {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option4.getText().toString();
 
-                    option4.setBackgroundResource(R.drawable.option_selection);
+                    option4.setBackgroundResource(R.drawable.wrong_option);
                     option4.setTextColor(Color.WHITE);
 
                     revealAnswer();
@@ -159,8 +153,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                quizTimer.purge();
-                quizTimer.cancel();
+
 
                 startActivity(new Intent(QuizActivity.this, MainActivity.class));
                 finish();
@@ -178,16 +171,16 @@ public class QuizActivity extends AppCompatActivity {
         if (currentQuestionPosition < questionsList.size()) {
             selectedOptionByUser = "";
 
-            option1.setBackgroundResource(R.drawable.round_back_white_stroke2);
+            option1.setBackgroundResource(R.drawable.options_background);
             option1.setTextColor(Color.parseColor("#1F6BB8"));
 
-            option2.setBackgroundResource(R.drawable.round_back_white_stroke2);
+            option2.setBackgroundResource(R.drawable.options_background);
             option2.setTextColor(Color.parseColor("#1F6BB8"));
 
-            option3.setBackgroundResource(R.drawable.round_back_white_stroke2);
+            option3.setBackgroundResource(R.drawable.options_background);
             option3.setTextColor(Color.parseColor("#1F6BB8"));
 
-            option4.setBackgroundResource(R.drawable.round_back_white_stroke2);
+            option4.setBackgroundResource(R.drawable.options_background);
             option4.setTextColor(Color.parseColor("#1F6BB8"));
 
             questions.setText((currentQuestionPosition + 1) + "/" + questionsList.size());
@@ -207,54 +200,7 @@ public class QuizActivity extends AppCompatActivity {
 
         }
     }
-    private void startTimer(TextView timerTextView) {
-        quizTimer = new Timer();
 
-        quizTimer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-
-                if (seconds == 0) {
-                    totalTimeInMins--;
-                    seconds = 59;
-                } else if (seconds == 0 && totalTimeInMins == 0) {
-                    quizTimer.purge();
-                    quizTimer.cancel();
-
-                    Toast.makeText(QuizActivity.this, "Time Over", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(QuizActivity.this, QuizResults.class);
-                    intent.putExtra("correct", getCorrectAnswers());
-                    intent.putExtra("incorrect", getInCorrectAnswers());
-                    startActivity(intent);
-
-                    finish();
-                } else {
-                    seconds--;
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                         String finalMinutes = String.valueOf(totalTimeInMins);
-                         String finalSeconds = String.valueOf(seconds);
-
-                        if (finalMinutes.length() == 1) {
-                            finalMinutes = "0" + finalMinutes;
-
-                        }
-
-                        if (finalSeconds.length() == 1) {
-                            finalSeconds = "0" + finalSeconds;
-                        }
-
-                        timerTextView.setText(finalMinutes + ":" + finalSeconds);
-
-                    }
-                });
-            }
-        }, 1000, 1000);
-    }
 
     private int getCorrectAnswers() {
 
@@ -290,8 +236,7 @@ public class QuizActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        quizTimer.purge();
-        quizTimer.cancel();
+
 
         startActivity(new Intent(QuizActivity.this, MainActivity.class));
         finish();
