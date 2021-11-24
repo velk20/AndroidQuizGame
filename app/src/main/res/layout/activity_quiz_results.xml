@@ -21,13 +21,13 @@
         android:id="@+id/success"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/congrats"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:layout_below="@+id/congrats"
-        android:text="You've sucessfully completed a quiz"
+        android:text="You've successfully completed a quiz"
         android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_below="@+id/success"

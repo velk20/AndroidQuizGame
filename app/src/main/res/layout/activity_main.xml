@@ -23,13 +23,14 @@
         android:id="@+id/chooseTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:layout_below="@id/quizIcon"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
+        android:text="Choose your programming language for quiz"
         android:textColor="#99FFFFFF"
-        android:text="Choose Topic"
-        />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:id="@+id/layout1"

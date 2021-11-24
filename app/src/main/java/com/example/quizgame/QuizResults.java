@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.service.autofill.OnClickAction;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class QuizResults extends AppCompatActivity {
@@ -19,12 +20,22 @@ public class QuizResults extends AppCompatActivity {
         final AppCompatButton startNewBtn = findViewById(R.id.startNewQuizBtn);
         final TextView correctAnswer = findViewById(R.id.correctAnswers);
         final TextView incorrectAnswer = findViewById(R.id.inCorrectAnswer);
+        final ImageView endQuizImage = findViewById(R.id.congrats);
+        final TextView successOrFailure = findViewById(R.id.success);
 
         final int getCorrectAnswers = getIntent().getIntExtra("correct", 0);
         final int getIncorrectAnswers = getIntent().getIntExtra("incorrect", 0);
 
-        correctAnswer.setText(String.valueOf(getCorrectAnswers));
-        incorrectAnswer.setText(String.valueOf(getIncorrectAnswers));
+        correctAnswer.setText("Correct Answers : "+getCorrectAnswers);
+        incorrectAnswer.setText("Wrong Answers : "+getIncorrectAnswers);
+
+        if (getIncorrectAnswers > getCorrectAnswers) {
+            endQuizImage.setImageResource(R.drawable.loser);
+            successOrFailure.setText("You've failed to complete the quiz!");
+        } else {
+            endQuizImage.setImageResource(R.drawable.congratulations);
+            successOrFailure.setText("You've successfully completed the quiz!");
+        }
 
         startNewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
