@@ -61,7 +61,7 @@
         android:layout_height="50dp"
         android:text="Start New Quiz"
         android:textColor="#FFFFFF"
-        android:background="@drawable/correct_option1"
+        android:background="@drawable/button_background_shape"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"/>
 

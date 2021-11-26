@@ -31,9 +31,9 @@ private String selectedTopicName = "";
                 selectedTopicName = "java";
 
                 java.setBackgroundResource(R.drawable.selection_background);
-                php.setBackgroundResource(R.drawable.round_back_white10);
-                python.setBackgroundResource(R.drawable.round_back_white10);
-                js.setBackgroundResource(R.drawable.round_back_white10);
+                php.setBackgroundResource(R.drawable.initial_selections);
+                python.setBackgroundResource(R.drawable.initial_selections);
+                js.setBackgroundResource(R.drawable.initial_selections);
 
             }
         });
@@ -45,9 +45,9 @@ private String selectedTopicName = "";
                 selectedTopicName = "php";
 
                 php.setBackgroundResource(R.drawable.selection_background);
-                java.setBackgroundResource(R.drawable.round_back_white10);
-                python.setBackgroundResource(R.drawable.round_back_white10);
-                js.setBackgroundResource(R.drawable.round_back_white10);
+                java.setBackgroundResource(R.drawable.initial_selections);
+                python.setBackgroundResource(R.drawable.initial_selections);
+                js.setBackgroundResource(R.drawable.initial_selections);
             }
         });
 
@@ -58,9 +58,9 @@ private String selectedTopicName = "";
                 selectedTopicName = "python";
 
                 python.setBackgroundResource(R.drawable.selection_background);
-                java.setBackgroundResource(R.drawable.round_back_white10);
-                php.setBackgroundResource(R.drawable.round_back_white10);
-                js.setBackgroundResource(R.drawable.round_back_white10);
+                java.setBackgroundResource(R.drawable.initial_selections);
+                php.setBackgroundResource(R.drawable.initial_selections);
+                js.setBackgroundResource(R.drawable.initial_selections);
             }
         });
 
@@ -71,9 +71,9 @@ private String selectedTopicName = "";
                 selectedTopicName = "js";
 
                 js.setBackgroundResource(R.drawable.selection_background);
-                java.setBackgroundResource(R.drawable.round_back_white10);
-                python.setBackgroundResource(R.drawable.round_back_white10);
-                php.setBackgroundResource(R.drawable.round_back_white10);
+                java.setBackgroundResource(R.drawable.initial_selections);
+                python.setBackgroundResource(R.drawable.initial_selections);
+                php.setBackgroundResource(R.drawable.initial_selections);
             }
         });
 
