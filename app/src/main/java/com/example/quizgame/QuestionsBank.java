@@ -9,7 +9,7 @@ public class QuestionsBank {
     private static List<QuestionsList> javaQuestions(){
         final List<QuestionsList> questionsLists = new ArrayList<>();
 
-        final QuestionsList question1 = new QuestionsList("What is a correct syntax to output Hello World in Java?","System.out.println(Hello World);","print (Hello World);","Console.WriteLine(Hello World);","echo(Hello World);","System.out.println(Hello World);","");
+        final QuestionsList question1 = new QuestionsList("What is a correct syntax to output Hello World in Java?","System.out.println(\"Hello World\");","print (\"Hello World\");","Console.WriteLine(\"Hello World\");","echo(\"Hello World\");","System.out.println(\"Hello World\");","");
         final QuestionsList question2 = new QuestionsList("Java is short for JavaScript?","False","True","Maybe","50/50","False","");
         final QuestionsList question3 = new QuestionsList("How do you insert COMMENTS in Java code? ","/*This is a comment","#This is a comment","//This is a comment","<!--This is a comment-->","//This is a comment","");
         final QuestionsList question4 = new QuestionsList("Which data type is used to create a variable that should store text?","string","String","myString","Txt","String","");

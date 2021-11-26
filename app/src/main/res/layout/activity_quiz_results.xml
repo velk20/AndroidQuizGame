@@ -12,8 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:maxHeight="300dp"
         android:adjustViewBounds="true"
         android:src="@drawable/congratulations" />
 
@@ -63,6 +64,6 @@
         android:textColor="#FFFFFF"
         android:background="@drawable/button_background_shape"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"/>
+        android:layout_margin="50dp"/>
 
 </RelativeLayout>
