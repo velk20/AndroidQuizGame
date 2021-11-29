@@ -69,11 +69,11 @@ public class QuizActivity extends AppCompatActivity {
                 if (selectedOptionByUser.isEmpty()) {
                     selectedOptionByUser = option1.getText().toString();
 
+
+
                     option1.setBackgroundResource(R.drawable.wrong_option);
                     option1.setTextColor(Color.WHITE);
-
                     revealAnswer();
-
                     questionsList.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
 
                 }
@@ -89,7 +89,6 @@ public class QuizActivity extends AppCompatActivity {
 
                     option2.setBackgroundResource(R.drawable.wrong_option);
                     option2.setTextColor(Color.WHITE);
-
                     revealAnswer();
 
                     questionsList.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
@@ -107,8 +106,8 @@ public class QuizActivity extends AppCompatActivity {
 
                     option3.setBackgroundResource(R.drawable.wrong_option);
                     option3.setTextColor(Color.WHITE);
-
                     revealAnswer();
+
 
                     questionsList.get(currentQuestionPosition).setUserSelectedAnswer(selectedOptionByUser);
 
@@ -151,9 +150,6 @@ public class QuizActivity extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
 
                 startActivity(new Intent(QuizActivity.this, MainActivity.class));
                 finish();
@@ -243,11 +239,12 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    private void  revealAnswer(){
+    private void   revealAnswer(){
         final String getAnswer = questionsList.get(currentQuestionPosition).getAnswer();
         if (option1.getText().toString().equals(getAnswer)) {
             option1.setBackgroundResource(R.drawable.correct_option);
             option1.setTextColor(Color.WHITE);
+
 
         } else if (option2.getText().toString().equals(getAnswer)) {
             option2.setBackgroundResource(R.drawable.correct_option);
@@ -262,6 +259,5 @@ public class QuizActivity extends AppCompatActivity {
             option4.setTextColor(Color.WHITE);
 
         }
-
     }
 }

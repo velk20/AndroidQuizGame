@@ -118,7 +118,7 @@ public class QuestionsBank {
     private static List<QuestionsList> pythonQuestions(){
         final List<QuestionsList> questionsLists = new ArrayList<>();
         final QuestionsList question1 = new QuestionsList("What is a correct syntax to output \"Hello World\" in Python?","print(\"Hello World\")","echo \"Hello World\"","echo(\"Hello World\");","p(\"Hello World\")","print(\"Hello World\")","");
-        final QuestionsList question2 = new QuestionsList("How do you insert COMMENTS in Python code?","#Comment","//Comment","/*Comment*/","%Comment%","#This is a comment","");
+        final QuestionsList question2 = new QuestionsList("How do you insert COMMENTS in Python code?","#Comment","//Comment","/*Comment*/","%Comment%","#Comment","");
         final QuestionsList question3 = new QuestionsList("Which one is NOT a legal variable name?","Myvar","my-var","_myvar","my_var","my-var","");
         final QuestionsList question4 = new QuestionsList("How do you start writing a while loop in Python?","while (x > y)","x > y while {","while x > y {","while x > y:","while x > y:","");
         final QuestionsList question5 = new QuestionsList("What is the correct file extension for Python files?",".pt",".pyt",".pyth",".py",".py","");
