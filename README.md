@@ -13,7 +13,7 @@ This is my android project for my course "Programming Android Applications with 
 ## :hammer: Built with:
 * [Java 17]https://www.java.com/en/)
 * [Android Studio](https://developer.android.com/studio)
-* <br/><br/>
+<br/><br/>
 
 ## 📸 Application screenshots
 
