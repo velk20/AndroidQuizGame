@@ -5,9 +5,7 @@ This is my android project for my course "Programming Android Applications with 
 <br/><br/>
 
 ## 📝 Project Overview
--	**AndroidQuizGame** is a android game where you choose what programming language want to take a quiz questions on. You can choose between 
-<br>
-[![My Skills](https://skillicons.dev/icons?i=java,php,python,js)](https://skillicons.dev)
+-	**AndroidQuizGame** is a android game where you choose what programming language want to take a quiz questions on. You can choose between : Java, PHP, Python or JavaScript
 <br/><br/>
 
 ## :hammer: Built with:
